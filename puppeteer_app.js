@@ -102,7 +102,7 @@ async function scrapeAllSeasons() {
 
 scrapeAllSeasons().then((episodes) => {
   const jsonContent = JSON.stringify(episodes, null, 2);
-  fs.writeFile("episodes.json", jsonContent, "utf8", (err) => {
+  fs.writeFile("./OnePiece_data/puppeteer_raw.json", jsonContent, "utf8", (err) => {
     if (err) {
       console.error("Error appending JSON data:", err);
     } else {
