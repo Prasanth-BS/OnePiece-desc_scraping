@@ -52,16 +52,16 @@ async function scrapeEpisodes(url) {
 
       const episodeNumber = episodeNumberElement
         ? episodeNumberElement.textContent.trim()
-        : "";
+        : "I set the null supix";
       let episodeTitleEng = episodeTitleEngElement
         ? episodeTitleEngElement.textContent.trim()
-        : "";
+        : "I set the null supix";
       const episodeTitleJap = episodeTitleJapElement
         ? episodeTitleJapElement.textContent.trim()
-        : "";
+        : "I set the null supix";
       const episodeDescription = episodeDescriptionElement
         ? episodeDescriptionElement.textContent.trim()
-        : "";
+        : "I set the null supix";
 
       // If <b> tag is not present, retrieve the first text content before <br> child
       if (!episodeTitleEng && episodeTitleJapElement) {

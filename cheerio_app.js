@@ -48,6 +48,8 @@ async function scrapeAllSeasons() {
 
 (async () => {
   const rawData = await scrapeAllSeasons();
+
+  console.log(rawData[10]);
   
   const processedData = rawData.map(data => {
     const titleSplits = data.episodeTitleEng.split("\"");
@@ -62,7 +64,7 @@ async function scrapeAllSeasons() {
     });
     
   
-  const processedJson = JSON.stringify(rawData, null, 2);
+  const processedJson = JSON.stringify(processedData, null, 2);
 
   fs.writeFile("./OnePiece_data/cheerio_raw.json", processedJson, "utf8", (err) => {
     if (err) {
